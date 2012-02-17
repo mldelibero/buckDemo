@@ -1,5 +1,3 @@
 elements-dir ./footprints
-elements-dir ~/projects/geda/footprints/through_hole
-elements-dir ~/projects/geda/footprints/connectors
 schematics buckDemo.sch
-output-name layout_buckDemo
+output-name lay
