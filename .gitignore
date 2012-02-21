@@ -1,2 +1,4 @@
 *.cmd
 *.net
+*.bak*
+*.save
