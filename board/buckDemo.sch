@@ -26,7 +26,7 @@ N 50100 49200 51200 49200 4
 T 50100 49200 5 10 0 1 0 0 1
 netname=buckGateDrive
 }
-T 41900 49400 9 10 1 0 0 0 1
+T 47200 45800 9 10 1 0 0 0 1
 Set Variable Duty Cycle
 N 51800 49700 51800 50300 4
 C 52700 48500 1 0 0 inductor-1.sym
@@ -48,17 +48,6 @@ T 51900 47900 5 10 1 1 90 0 1
 refdes=D1
 T 52500 47600 5 10 0 0 0 0 1
 footprint=conn_2_150mil
-}
-C 54600 47700 1 90 0 capacitor-1.sym
-{
-T 53900 47900 5 10 0 0 90 0 1
-device=CAPACITOR
-T 54100 47900 5 10 1 1 90 0 1
-refdes=C2
-T 53700 47900 5 10 0 0 90 0 1
-symversion=0.1
-T 54600 47700 5 10 0 0 0 0 1
-footprint=conn_2_200mil
 }
 C 55100 47700 1 270 1 resistor-1.sym
 {
@@ -185,7 +174,7 @@ C 49800 48800 1 180 0 generic-power.sym
 T 49600 48550 5 10 1 1 180 3 1
 net=Vcc:1
 }
-C 49500 49900 1 180 1 gnd-2.sym
+C 49500 50100 1 180 1 gnd-2.sym
 C 52500 45200 1 90 0 diode-2.sym
 {
 T 51900 45600 5 10 0 0 90 0 1
@@ -194,17 +183,6 @@ T 51900 45500 5 10 1 1 90 0 1
 refdes=D2
 T 52500 45200 5 10 0 0 0 0 1
 footprint=conn_2_150mil
-}
-C 54600 45300 1 90 0 capacitor-1.sym
-{
-T 53900 45500 5 10 0 0 90 0 1
-device=CAPACITOR
-T 54100 45500 5 10 1 1 90 0 1
-refdes=C3
-T 53700 45500 5 10 0 0 90 0 1
-symversion=0.1
-T 54600 45300 5 10 0 0 0 0 1
-footprint=conn_2_200mil
 }
 N 51800 47500 51800 47300 4
 C 51200 49700 1 180 1 pmos_with_diode.sym
@@ -432,7 +410,7 @@ footprint=DIP8
 T 43800 49400 5 10 1 1 0 0 1
 refdes=U1
 T 43600 48500 5 10 0 1 0 0 1
-slot=1
+slot=2
 }
 C 45800 48300 1 0 0 tl082-1.sym
 {
@@ -443,7 +421,7 @@ footprint=DIP8
 T 46000 49200 5 10 1 1 0 0 1
 refdes=U1
 T 45800 48300 5 10 0 1 0 0 1
-slot=2
+slot=1
 }
 C 49100 49600 1 180 1 tl082-1.sym
 {
@@ -463,7 +441,7 @@ C 48300 46600 1 90 0 pot-1.sym
 T 47400 47400 5 10 0 0 270 8 1
 device=VARIABLE_RESISTOR
 T 47900 47200 5 10 1 1 270 8 1
-refdes=R?
+refdes=R18
 T 46800 47400 5 10 0 0 270 8 1
 footprint=th_3_pot
 T 48400 47300 5 10 1 1 90 8 1
@@ -517,3 +495,109 @@ N 53600 45700 53700 45700 4
 N 53700 45700 53700 46200 4
 N 52700 45700 52600 45700 4
 N 52600 45700 52600 46200 4
+C 54200 48600 1 270 0 capacitor-2.sym
+{
+T 54900 48400 5 10 0 0 270 0 1
+device=POLARIZED_CAPACITOR
+T 54700 48400 5 10 1 1 270 0 1
+refdes=C2
+T 55100 48400 5 10 0 0 270 0 1
+symversion=0.1
+T 54200 48600 5 10 0 1 0 0 1
+footprint=jewelryCap
+}
+C 54200 46200 1 270 0 capacitor-2.sym
+{
+T 54900 46000 5 10 0 0 270 0 1
+device=POLARIZED_CAPACITOR
+T 54700 46000 5 10 1 1 270 0 1
+refdes=C3
+T 55100 46000 5 10 0 0 270 0 1
+symversion=0.1
+T 54200 46200 5 10 0 1 0 0 1
+footprint=jewelryCap
+}
+C 45800 52300 1 270 0 capacitor-1.sym
+{
+T 46500 52100 5 10 0 0 270 0 1
+device=CAPACITOR
+T 46300 52000 5 10 1 1 270 0 1
+refdes=C11
+T 46700 52100 5 10 0 0 270 0 1
+symversion=0.1
+T 45800 52300 5 10 0 0 270 0 1
+footprint=conn_2_150mil
+T 45800 51600 5 10 1 1 90 0 1
+value=150pF
+}
+C 45800 52300 1 0 0 generic-power.sym
+{
+T 46000 52550 5 10 1 1 0 3 1
+net=Vcc:1
+}
+C 46100 51100 1 0 1 gnd-2.sym
+N 50800 49400 50800 49200 4
+N 49600 49800 49600 49600 4
+N 49100 49900 49100 49700 4
+N 49100 49700 49600 49700 4
+N 47200 48300 47600 48300 4
+T 42400 50100 9 10 1 0 0 0 1
+Set Variable Frequency
+C 46900 48300 1 0 0 testPoint.sym
+{
+T 47500 49000 5 10 0 1 0 0 1
+footprint=testPoint_5016.fp
+T 47100 48100 5 10 1 1 0 0 1
+refdes=tp1
+}
+C 48800 49900 1 0 0 testPoint.sym
+{
+T 49400 50600 5 10 0 1 0 0 1
+footprint=testPoint_5016.fp
+T 49000 50500 5 10 1 1 0 0 1
+refdes=tp2
+T 48800 49900 5 10 1 0 0 0 1
+device=testPoint
+}
+C 50500 49400 1 0 0 testPoint.sym
+{
+T 51100 50100 5 10 0 1 0 0 1
+footprint=testPoint_5016.fp
+T 50700 50000 5 10 1 1 0 0 1
+refdes=tp3
+}
+C 54500 48600 1 0 0 testPoint.sym
+{
+T 55100 49300 5 10 0 1 0 0 1
+footprint=testPoint_5016.fp
+T 54700 49200 5 10 1 1 0 0 1
+refdes=tp4
+}
+C 55100 47600 1 180 0 testPoint.sym
+{
+T 54500 46900 5 10 0 1 180 0 1
+footprint=testPoint_5016.fp
+T 54600 47100 5 10 1 1 180 0 1
+refdes=tp5
+}
+C 54500 46200 1 0 0 testPoint.sym
+{
+T 55100 46900 5 10 0 1 0 0 1
+footprint=testPoint_5016.fp
+T 55000 46700 5 10 1 1 0 0 1
+refdes=tp6
+}
+C 55100 45200 1 180 0 testPoint.sym
+{
+T 54500 44500 5 10 0 1 180 0 1
+footprint=testPoint_5016.fp
+T 54900 44600 5 10 1 1 180 0 1
+refdes=tp7
+}
+C 46900 50300 1 0 0 testPoint.sym
+{
+T 47500 51000 5 10 0 1 0 0 1
+footprint=testPoint_5016.fp
+T 47100 50100 5 10 1 1 0 0 1
+refdes=tp8
+}
