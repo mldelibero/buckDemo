@@ -556,7 +556,7 @@ T 49400 50600 5 10 0 1 0 0 1
 footprint=testPoint_5016.fp
 T 49000 50500 5 10 1 1 0 0 1
 refdes=tp2
-T 48800 49900 5 10 1 0 0 0 1
+T 48800 49900 5 10 0 0 0 0 1
 device=testPoint
 }
 C 50500 49400 1 0 0 testPoint.sym
